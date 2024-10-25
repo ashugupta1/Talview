@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+/* Global styling to reset margins and padding, 
+   apply box-sizing to all elements, 
+   and set a default font family */
+   * {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Background image for the entire page, set to cover the viewport height 
+   and ensure it doesn't repeat */
+.background-image {
+    background-image: url("https://attend.talview.com/assets/skin/images/183_talview_internal_hiring/bg.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Logo styling: white background with padding, 
+   center-aligned with rounded bottom corners */
+.logo {
+    background-color: white;
+    height: 75px;
+    width: 150px;
+    margin-left: 20%;
+    padding: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Flexbox container for aligning elements to the end and vertically centering them */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Left-side container to hold additional content like an image or quote */
+.left-container {
+    height: 570px;
+    width: 450px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Right-side container where the form will reside, 
+   with a fixed height, width, and rounded corners */
+.right-container {
+    background-color: white;
+    height: 450px;
+    width: 480px;
+    margin-top: 115px;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Header styling inside the form, with a teal background color and white text */
+.header {
+    height: 55px;
+    background-color: #03BC9D;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    border-radius: 1%;
+}
+
+/* Section container styling for form padding and spacing */
+.section-container {
+    margin: 30px;
+}
+
+/* Flexbox styling for input name fields 
+   to align them side-by-side and distribute the space evenly */
+.name-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Main container for centering the entire form within the viewport */
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #03BC9D, #03BC9D);
+}
+
+/* Styling for the actual form, with padding and shadow for visual depth */
+.register-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Title of the form, center-aligned with larger font size and teal color */
+.form-title {
+    text-align: center;
+    font-size: 1.75rem;
+    color: #03BC9D;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Form group styling for spacing between inputs */
+.form-group {
+    margin-bottom: 1rem;
+    color: #212121;
+}
+
+/* Styling for input fields with padding and border */
+.form-input {
+    width: 90%;
+    padding: 0.5rem;
+    border: 1px solid #D4D4D4;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    outline: none;
+    border-radius: 4px;
+}
+
+/* Focus state for inputs: changes border color to teal */
+.form-input:focus {
+    border-color: #03BC9D;
+}
+
+/* Required field asterisk styling in red */
+.required {
+    color: red;
+}
+
+/* Help text below the email field, styled in teal and clickable */
+.email-help-text {
+    color: #03BC9D;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 0.25rem;
+}
+
+/* Styling for checkbox labels, with slightly larger text */
+.checkbox-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Extra margin for checkboxes and making them clickable */
+.checkbox-label input {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+/* Styling for links within the form, 
+   making them teal and underlined */
+.link {
+    color: #03BC9D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Submit button styling: teal background with white text 
+   and small padding for a clean, clickable button */
+.submit-btn {
+    height: 40px;
+    width: 150px;
+    background-color: #03BC9D;
+    border-radius: 4px;
+    color: #fff;
+    margin: 4px;
+    padding: 4px;
+    font-size: small;
+}
+
+/* Full-width adjustment for the email input field */
+.email-width {
+    width: 95%;
+}
+
+/* Button container for centering the button horizontally */
+.btn {
+    display: flex;
+    justify-content: center;
 }

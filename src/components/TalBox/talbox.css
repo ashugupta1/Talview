@@ -1,0 +1,109 @@
+/* General styling for the chatbox */
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 2px solid #03bc9d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  /* Styling for the messages container */
+  .messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #03bc9d #f1f1f1;
+  }
+  
+  /* Each message bubble styling */
+  .message {
+    max-width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+  }
+  
+  /* Bot messages */
+  .message.bot {
+    background-color: #03bc9d;
+    color: white;
+    align-self: flex-start;
+  }
+  
+  /* User messages */
+  .message.user {
+    background-color: #e5e5e5;
+    color: #333;
+    align-self: flex-end;
+  }
+  
+  /* Input container styling */
+  .input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  /* Chat input styling */
+  .chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  /* Chat send button styling */
+  .chat-send-btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #03bc9d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-send-btn:hover {
+    background-color: #029b84;
+  }
+  
+  /* Scrollbar styling for the messages container */
+  .messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .messages::-webkit-scrollbar-thumb {
+    background-color: #03bc9d;
+    border-radius: 10px;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media screen and (max-width: 600px) {
+    .chatbox {
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      height: 50%;
+      border-radius: 0;
+    }
+  }
+  
